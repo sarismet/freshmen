@@ -11,10 +11,10 @@ public class Main {
 	public static void main(String[] args) {
 
 		// MerkleTree m0 = new MerkleTree("sample/white_walker.txt");
-		MerkleTree m0 = new MerkleTree("data/1_bad.txt");
+		MerkleTree m0 = new MerkleTree("data/1meta.txt");
 		// MerkleTree m0 = new MerkleTree("data/1.txt");
 		// MerkleTree m0 = new MerkleTree("sample/white_walkermeta.txt");
-		String hash = m0.getRoot().getLeft().getRight().getData();
+		//String hash = m0.getRoot().getLeft().getRight().getData();
 		System.out.println(hash);
 
 		// boolean valid = m0.checkAuthenticity("sample/white_walkermeta.txt");
