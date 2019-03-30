@@ -9,24 +9,13 @@ import java.util.HashMap;
 import java.util.List;
 
 
-/**
- * Class that implements the game logic for Nature Simulator.
- *
- * IMPORTANT: Please do not modify this class in any way,
- * it will be reset when grading your project.
- */
+
 public class NatureSimulator extends GridGame {
 
     private List<Creature> creatures;
     private Creature[][] creaturesMap;
 
-    /**
-     * Creates a new Nature Simulator game instance
-     * @param gridWidth number of grid squares along the width
-     * @param gridHeight number of grid squares along the height
-     * @param gridSquareSize size of a grid square in pixels
-     * @param frameRate frame rate (number of timer ticks per second)
-     */
+
     public NatureSimulator(int gridWidth, int gridHeight, int gridSquareSize, int frameRate) {
         super(gridWidth, gridHeight, gridSquareSize, frameRate);
 
@@ -41,11 +30,11 @@ public class NatureSimulator extends GridGame {
         for (Creature creature : creaturesCopy) {
             if (creature.getHealth() <= 0.0) {
                 // Creature is dead, hence continue with the next creature
-                // (It must be already removed, it won't be in the list for the next tick)
+
                 continue;
             }
 
-            // Reset current creature's map position (its position will be marked again, if it still lives)
+         
             updateCreaturesMap(creature.getX(), creature.getY(), null);
 
             // Choose action
@@ -89,11 +78,7 @@ public class NatureSimulator extends GridGame {
         }
     }
 
-    /**
-     * Adds a new creature to the game
-     * @param creature creature to be added
-     * @return boolean indicating the success of addition
-     */
+
     public boolean addCreature(Creature creature) {
         if (creature != null) {
             if (isPositionInsideGrid(creature.getX(), creature.getY())) {
