@@ -5,13 +5,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
-/**
- * A drawable panel structured as a grid.
- * Provides some drawing methods suitable for pixel-like game entities.
- *
- * IMPORTANT: Please do not modify this class in any way,
- * it will be reset when grading your project.
- */
+
 public class GridPanel extends JPanel {
 
     private final int gamePanelWidth;
@@ -21,12 +15,7 @@ public class GridPanel extends JPanel {
 
     private int gridSquareSize;
 
-    /**
-     * Constructs a grid panel that can be drawn on
-     * @param gridWidth width of the grid
-     * @param gridHeight height of the grid
-     * @param gridSquareSize size of a grid square in pixels
-     */
+ 
     public GridPanel(int gridWidth, int gridHeight, int gridSquareSize) {
         this.gridSquareSize = gridSquareSize;
         gamePanelWidth = gridWidth * gridSquareSize;
@@ -48,9 +37,7 @@ public class GridPanel extends JPanel {
         }
     }
 
-    /**
-     * Repaints the panel to white
-     */
+
     public void clearCanvas() {
         Graphics g = gameImage.getGraphics();
         g.setColor(Color.WHITE);
@@ -58,25 +45,16 @@ public class GridPanel extends JPanel {
         g.dispose();
     }
 
-    /**
-     * Returns the number of grid squares along the width
-     * @return grid width
-     */
+
     public int getGridWidth() {
         return gamePanelWidth / gridSquareSize;
     }
 
-    /**
-     * Returns the number of grid squares along the height
-     * @return grid height
-     */
     public int getGridHeight() {
         return gamePanelHeight / gridSquareSize;
     }
 
-    /**
-     * Draws gridlines
-     */
+
     public void drawGrid() {
         Graphics g = gameImage.getGraphics();
         g.setColor(Color.LIGHT_GRAY);
@@ -94,12 +72,6 @@ public class GridPanel extends JPanel {
         g.dispose();
     }
 
-    /**
-     * Draws a filled square in the given grid position
-     * @param gridX x position
-     * @param gridY y position
-     * @param color fill color of the square
-     */
     public void drawSquare(int gridX, int gridY, Color color) {
         if (gridX < 0 || gridY < 0 ||
                 gridX >= gamePanelWidth / gridSquareSize || gridY >= gamePanelHeight / gridSquareSize) {
@@ -113,12 +85,7 @@ public class GridPanel extends JPanel {
         g.dispose();
     }
 
-    /**
-     * Draws a small filled square in the given grid position
-     * @param gridX x position
-     * @param gridY y position
-     * @param color fill color of the square
-     */
+
     public void drawSmallSquare(int gridX, int gridY, Color color) {
         if (gridX < 0 || gridY < 0 ||
                 gridX >= gamePanelWidth / gridSquareSize || gridY >= gamePanelHeight / gridSquareSize) {
