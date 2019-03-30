@@ -5,13 +5,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
-/**
- * A drawable panel structured as a grid.
- * Provides some drawing methods suitable for pixel-like game entities.
- *
- * IMPORTANT: Please do not modify this class in any way,
- * it will be reset when grading your project.
- */
 public class GridPanel extends JPanel {
 
     private final int gamePanelWidth;
@@ -21,12 +14,6 @@ public class GridPanel extends JPanel {
 
     private int gridSquareSize;
 
-    /**
-     * Constructs a grid panel that can be drawn on
-     * @param gridWidth width of the grid
-     * @param gridHeight height of the grid
-     * @param gridSquareSize size of a grid square in pixels
-     */
     public GridPanel(int gridWidth, int gridHeight, int gridSquareSize) {
         this.gridSquareSize = gridSquareSize;
         gamePanelWidth = gridWidth * gridSquareSize;
