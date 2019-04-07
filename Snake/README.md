@@ -1,2 +1,1 @@
-
-the projects that I had made when I was a freshmen
+This project is like ordinary snake game but it is directed by basic artificial intelligence. you just determine the sizes of window and frame rate in main class then the snake move to food placed on the map by computer randomly and if the snake reach out the size 8 the it is divided into 2 part.
